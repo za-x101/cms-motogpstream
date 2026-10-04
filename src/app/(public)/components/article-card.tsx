@@ -70,7 +70,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
                 : article.title}
             </h2>
             {article.categories.length > 0 && (
-              <div className="mb-4 flex min-h-8 flex-wrap gap-2">
+              <div className="mb-1 flex min-h-8 flex-wrap gap-2 mt-1.5">
                 {article.categories.slice(0, 2).map((category) => (
                   <Link key={category.slug} href={`/category/${category.slug}`}>
                     <span
@@ -92,19 +92,19 @@ export function ArticleCard({ article }: ArticleCardProps) {
             )}
 
             {article.metaDescription && (
-              <p className="line-clamp-3  text-sm font-medium leading-relaxed text-neutral-700">
+              <p className="line-clamp-3   text-sm font-medium leading-relaxed text-neutral-700">
                 {article.metaDescription}
               </p>
             )}
 
-            <div className="mt-auto">
-              <div className="flex gap-1 items-center  pt-6">
+            <div className="mt-0">
+              <div className="flex gap-1 items-center  pt-1 ">
                 <UserIcon className="w-5 h-5" />
                 <span className="text-xs font-black uppercase">
                   {article.uploadBy}
                 </span>
               </div>
-              <div className="mt-auto flex items-center justify-between gap-3 pt-1">
+              <div className="mt-auto flex items-center justify-between gap-3 pt-0">
                 <div className="flex gap-1 items-center">
                   <Calendar />
                   <time
@@ -123,7 +123,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
                 flex items-center gap-2
                 border-2 border-black
                 bg-black
-                px-3  py-2
+                px-3  py-1.5
                 
                 text-xs
                 font-black
